@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+
+# Capturas y artefactos locales de validación visual
+output/playwright/
+.playwright-cli/
+
+# Archivos generados por editores y servidores locales
+.vscode/
+.idea/
+node_modules/
