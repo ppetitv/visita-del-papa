@@ -210,7 +210,7 @@
 
     <section class="report-feature" id="reportaje" aria-labelledby="report-title">
       <div class="report-feature__inner container reveal">
-        <button class="report-feature__media" type="button" data-video-open aria-controls="report-video-modal" aria-label="Ver el reportaje El pastor que Chiclayo aún lleva en el corazón">
+        <button class="report-feature__media" type="button" data-video-open data-video-id="fNtS0tomOLk" data-video-title="León XIV vuelve a casa — Episodio 1: Chiclayo" aria-controls="report-video-modal" aria-label="Ver el reportaje El pastor que Chiclayo aún lleva en el corazón">
           <img src="assets/reportaje-cover.png" alt="Escena documental de Robert Prevost caminando por una plaza de Chiclayo al atardecer" loading="lazy" decoding="async">
           <span class="report-feature__overlay" aria-hidden="true"></span>
           <span class="report-feature__copy">
@@ -226,6 +226,54 @@
           </span>
           <span class="report-feature__badge">Ver reportaje completo <span aria-hidden="true">↗</span></span>
         </button>
+
+        <aside class="report-feature__episodes" aria-label="Episodios de la serie documental León XIV vuelve a casa">
+          <div class="episodes-head">
+            <strong>Episodios</strong>
+          </div>
+          <ol class="episode-list">
+            <li>
+              <button class="episode-card is-upcoming" type="button" data-episode="2" disabled aria-label="Episodio 2, próximo estreno">
+                <span class="episode-card__image">
+                  <img src="assets/reportaje-cover.png" alt="">
+                  <span>02</span>
+                </span>
+                <span class="episode-card__copy">
+                  <span>Episodio 2</span>
+                  <strong>La tierra que lo espera</strong>
+                  <small>Estreno este fin de semana</small>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button class="episode-card is-upcoming episode-card--third" type="button" data-episode="3" disabled aria-label="Episodio 3, próximo estreno">
+                <span class="episode-card__image">
+                  <img src="assets/reportaje-cover.png" alt="">
+                  <span>03</span>
+                </span>
+                <span class="episode-card__copy">
+                  <span>Episodio 3</span>
+                  <strong>El camino continúa</strong>
+                  <small>Próximo capítulo en preparación</small>
+                </span>
+              </button>
+            </li>
+            <li>
+              <button class="episode-card is-current" type="button" data-episode="1" data-video-open data-video-id="fNtS0tomOLk" data-video-title="León XIV vuelve a casa — Episodio 1: Chiclayo" aria-controls="report-video-modal" aria-label="Ver episodio 1: Chiclayo">
+                <span class="episode-card__image">
+                  <img src="assets/reportaje-cover.png" alt="">
+                  <span>01</span>
+                </span>
+                <span class="episode-card__copy">
+                  <span>Episodio 1</span>
+                  <strong>Chiclayo</strong>
+                  <small>El pastor que Chiclayo aún lleva en el corazón</small>
+                </span>
+                <span class="episode-card__duration"><img src="assets/video-duration.svg" alt="" aria-hidden="true">26:35</span>
+              </button>
+            </li>
+          </ol>
+        </aside>
       </div>
     </section>
 
@@ -415,7 +463,7 @@
     <div class="video-modal__dialog" role="document">
       <button class="video-modal__close" type="button" data-video-close aria-label="Cerrar reportaje">×</button>
       <div class="video-modal__frame" id="report-video-frame"></div>
-      <p class="video-modal__caption" id="report-video-title">León XIV vuelve a casa · Reportaje especial sobre su vínculo con Chiclayo. <a href="https://www.youtube.com/watch?v=fNtS0tomOLk" target="_blank" rel="noopener">Abrir en YouTube ↗</a></p>
+      <p class="video-modal__caption" id="report-video-title">León XIV vuelve a casa · Reportaje especial sobre su vínculo con Chiclayo. <a id="report-video-link" href="https://www.youtube.com/watch?v=fNtS0tomOLk" target="_blank" rel="noopener">Abrir en YouTube ↗</a></p>
       <details class="video-highlights" open>
         <summary>Momentos importantes del video</summary>
         <div class="video-highlights__list">
