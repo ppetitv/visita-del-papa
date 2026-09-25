@@ -791,13 +791,18 @@ main { overflow: clip; }
   display: flex;
   align-items: center;
   gap: .3rem;
-  color: rgba(255, 253, 249, .57);
+  padding: .14rem .3rem;
+  border: 1px solid rgba(237, 209, 143, .28);
+  border-radius: 999px;
+  background: rgba(9, 10, 8, .48);
+  color: rgba(255, 253, 249, .82);
   font-family: var(--utility);
-  font-size: .54rem;
+  font-size: .52rem;
+  font-weight: 600;
   letter-spacing: .1em;
 }
 
-.episode-card__duration img { width: .76rem; height: .76rem; }
+.episode-card__duration img { width: .72rem; height: .72rem; opacity: .82; }
 .episode-card:focus-visible { outline: 1px solid var(--gold-strong); outline-offset: .3rem; }
 
 .episode-card.is-upcoming { cursor: default; }
