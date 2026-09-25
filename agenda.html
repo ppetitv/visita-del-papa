@@ -53,17 +53,17 @@
         <h2 class="visually-hidden" id="schedule-title">Agenda por días</h2>
 
         <div class="agenda-filters" role="tablist" aria-label="Filtro por días de la agenda">
-          <button class="agenda-filter is-active" type="button" role="tab" aria-selected="true" data-agenda-tab="all">Todos</button>
-          <button class="agenda-filter" type="button" role="tab" aria-selected="false" data-agenda-tab="1">Día 1</button>
-          <button class="agenda-filter" type="button" role="tab" aria-selected="false" data-agenda-tab="2">Día 2</button>
-          <button class="agenda-filter" type="button" role="tab" aria-selected="false" data-agenda-tab="3">Día 3</button>
-          <button class="agenda-filter" type="button" role="tab" aria-selected="false" data-agenda-tab="4">Día 4</button>
-          <button class="agenda-filter" type="button" role="tab" aria-selected="false" data-agenda-tab="5">Día 5</button>
-          <button class="agenda-filter" type="button" role="tab" aria-selected="false" data-agenda-tab="6">Día 6</button>
+          <button class="agenda-filter is-active" id="agenda-tab-all" type="button" role="tab" aria-selected="true" aria-controls="agenda-all" data-agenda-tab="all">Todos</button>
+          <button class="agenda-filter" id="agenda-tab-1" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-1" data-agenda-tab="1">Día 1</button>
+          <button class="agenda-filter" id="agenda-tab-2" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-2" data-agenda-tab="2">Día 2</button>
+          <button class="agenda-filter" id="agenda-tab-3" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-3" data-agenda-tab="3">Día 3</button>
+          <button class="agenda-filter" id="agenda-tab-4" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-4" data-agenda-tab="4">Día 4</button>
+          <button class="agenda-filter" id="agenda-tab-5" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-5" data-agenda-tab="5">Día 5</button>
+          <button class="agenda-filter" id="agenda-tab-6" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-6" data-agenda-tab="6">Día 6</button>
         </div>
 
         <div class="agenda-days">
-          <article class="agenda-day" data-agenda-day="1">
+          <article class="agenda-day" id="agenda-day-1" data-agenda-day="1">
             <header class="agenda-day__meta">
               <span class="agenda-day__number">01</span>
               <p>Miércoles 11 de noviembre</p>
@@ -77,7 +77,7 @@
             </div>
           </article>
 
-          <article class="agenda-day" data-agenda-day="2">
+          <article class="agenda-day" id="agenda-day-2" data-agenda-day="2">
             <header class="agenda-day__meta">
               <span class="agenda-day__number">02</span>
               <p>Jueves 12 de noviembre</p>
@@ -91,7 +91,7 @@
             </div>
           </article>
 
-          <article class="agenda-day" data-agenda-day="3">
+          <article class="agenda-day" id="agenda-day-3" data-agenda-day="3">
             <header class="agenda-day__meta">
               <span class="agenda-day__number">03</span>
               <p>Viernes 13 de noviembre</p>
@@ -105,7 +105,7 @@
             </div>
           </article>
 
-          <article class="agenda-day" data-agenda-day="4">
+          <article class="agenda-day" id="agenda-day-4" data-agenda-day="4">
             <header class="agenda-day__meta">
               <span class="agenda-day__number">04</span>
               <p>Sábado 14 de noviembre</p>
@@ -118,7 +118,7 @@
             </div>
           </article>
 
-          <article class="agenda-day" data-agenda-day="5">
+          <article class="agenda-day" id="agenda-day-5" data-agenda-day="5">
             <header class="agenda-day__meta">
               <span class="agenda-day__number">05</span>
               <p>Domingo 15 de noviembre</p>
@@ -132,7 +132,7 @@
             </div>
           </article>
 
-          <article class="agenda-day" data-agenda-day="6">
+          <article class="agenda-day" id="agenda-day-6" data-agenda-day="6">
             <header class="agenda-day__meta">
               <span class="agenda-day__number">06</span>
               <p>Lunes 16 de noviembre</p>
