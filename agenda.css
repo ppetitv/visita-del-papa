@@ -91,8 +91,8 @@
   cursor: pointer;
   transition: color .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
 }
-.agenda-filter:hover { transform: translateY(-1px); border-color: var(--agenda-gold); }
-.agenda-filter:active { transform: translateY(0) scale(.97); }
+.agenda-filter:hover { border-color: var(--agenda-gold); box-shadow: 0 0 0 2px rgba(178, 138, 62, .12); }
+.agenda-filter:active { box-shadow: 0 0 0 1px rgba(178, 138, 62, .2); }
 .agenda-filter:focus-visible { outline: 2px solid var(--agenda-gold); outline-offset: 3px; }
 .agenda-filter.is-active { border-color: var(--agenda-gold); color: #fff; background: var(--agenda-gold); box-shadow: 0 4px 12px rgba(178, 138, 62, .2); }
 
