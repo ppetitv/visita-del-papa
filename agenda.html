@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&amp;display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="agenda.css">
@@ -44,104 +44,128 @@
           <p class="agenda-kicker">Conoce la</p>
           <h1 id="agenda-title">Agenda oficial</h1>
         </div>
-        <p class="agenda-hero__description">Mientras León XIV recorre Lima, Chiclayo, Cusco y Pucallpa, RPP ampliará esta agenda con cada confirmación oficial.</p>
+        <p class="agenda-hero__description">Consulta los horarios y sedes previstos para la visita. RPP actualizará el estado de cada actividad con información verificada.</p>
+      </div>
+    </section>
+
+    <section class="journey-status" aria-labelledby="journey-title">
+      <div class="journey-status__inner agenda-container">
+        <div class="journey-status__date" aria-hidden="true">
+          <strong data-journey-day>11</strong>
+          <span data-journey-month>NOV</span>
+        </div>
+        <div class="journey-status__story">
+          <div class="journey-status__meta">
+            <p data-journey-phase aria-live="polite">Próxima cita</p>
+          </div>
+          <h2 id="journey-title" data-journey-title>Llegada y Bienvenida Oficial</h2>
+          <p class="journey-status__detail" data-journey-detail>Mié 11 nov · 5:30 p. m. · Base Aérea del Callao, Lima</p>
+        </div>
+        <div class="journey-status__action">
+          <span data-journey-position>Lima</span>
+          <button type="button" data-journey-jump>
+            <span data-journey-jump-label>Ver las 4 actividades</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
       </div>
     </section>
 
     <section class="agenda-schedule" aria-labelledby="schedule-title">
       <div class="agenda-container">
-        <h2 class="visually-hidden" id="schedule-title">Agenda por días</h2>
-
-        <div class="agenda-filters" role="tablist" aria-label="Filtro por días de la agenda">
-          <button class="agenda-filter is-active" id="agenda-tab-all" type="button" role="tab" aria-selected="true" aria-controls="agenda-all" data-agenda-tab="all">Todos</button>
-          <button class="agenda-filter" id="agenda-tab-1" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-1" data-agenda-tab="1">Día 1</button>
-          <button class="agenda-filter" id="agenda-tab-2" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-2" data-agenda-tab="2">Día 2</button>
-          <button class="agenda-filter" id="agenda-tab-3" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-3" data-agenda-tab="3">Día 3</button>
-          <button class="agenda-filter" id="agenda-tab-4" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-4" data-agenda-tab="4">Día 4</button>
-          <button class="agenda-filter" id="agenda-tab-5" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-5" data-agenda-tab="5">Día 5</button>
-          <button class="agenda-filter" id="agenda-tab-6" type="button" role="tab" aria-selected="false" aria-controls="agenda-day-6" data-agenda-tab="6">Día 6</button>
+        <div class="journey-heading">
+          <div>
+            <p class="agenda-kicker">Seis jornadas · 11–16 de noviembre</p>
+            <h2 id="schedule-title">El recorrido</h2>
+          </div>
+          <p class="journey-heading__intro">De Lima a Chiclayo, Cusco y Pucallpa. Recorre los horarios y sedes de cada jornada.</p>
         </div>
-
-        <div class="agenda-days">
-          <article class="agenda-day" id="agenda-day-1" data-agenda-day="1">
+        <p class="agenda-reading-note">La línea dorada muestra las jornadas con cobertura confirmada. No representa una ubicación GPS.</p>
+        <p class="agenda-coverage-progress" data-coverage-progress aria-live="polite">La cobertura de la visita aún no ha comenzado.</p>
+        <div class="agenda-days" id="agenda-days">
+          <div class="agenda-days__rail" aria-hidden="true">
+            <span class="agenda-days__rail-fill"></span>
+            <span class="agenda-days__marker"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5 9h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          </div>
+          <article class="agenda-day" id="agenda-day-1" data-agenda-day="1" data-date="2026-11-11">
             <header class="agenda-day__meta">
-              <span class="agenda-day__number">01</span>
               <p>Miércoles 11 de noviembre</p>
               <h3>Lima</h3>
+              <span class="agenda-day__state" data-day-status="1"></span>
             </header>
             <div class="agenda-day__events">
-              <div class="agenda-event"><time>5:30pm</time><div><h4>Llegada y Bienvenida Oficial</h4><p>Base Aérea del Callao</p></div></div>
-              <div class="agenda-event"><time>6:15pm</time><div><h4>Ceremonia de Bienvenida en el Palacio de Gobierno</h4><p>Palacio de Gobierno, Lima</p></div></div>
-              <div class="agenda-event"><time>6:45pm</time><div><h4>Visita a la Presidente de la República</h4><p>Palacio de Gobierno</p></div></div>
-              <div class="agenda-event"><time>7:45pm</time><div><h4>Encuentro con las Autoridades, la Sociedad Civil y el Cuerpo Diplomático</h4><p>Gran Teatro Nacional</p></div></div>
+              <div class="agenda-event" data-event-id="llegada-callao"><time datetime="2026-11-11T17:30-05:00">5:30pm</time><div><h4>Llegada y Bienvenida Oficial</h4><p>Base Aérea del Callao</p></div></div>
+              <div class="agenda-event" data-event-id="bienvenida-palacio"><time datetime="2026-11-11T18:15-05:00">6:15pm</time><div><h4>Ceremonia de Bienvenida en el Palacio de Gobierno</h4><p>Palacio de Gobierno, Lima</p></div></div>
+              <div class="agenda-event" data-event-id="visita-presidencia"><time datetime="2026-11-11T18:45-05:00">6:45pm</time><div><h4>Visita a la Presidente de la República</h4><p>Palacio de Gobierno</p></div></div>
+              <div class="agenda-event" data-event-id="encuentro-autoridades"><time datetime="2026-11-11T19:45-05:00">7:45pm</time><div><h4>Encuentro con las Autoridades, la Sociedad Civil y el Cuerpo Diplomático</h4><p>Gran Teatro Nacional</p></div></div>
             </div>
           </article>
 
-          <article class="agenda-day" id="agenda-day-2" data-agenda-day="2">
+          <article class="agenda-day" id="agenda-day-2" data-agenda-day="2" data-date="2026-11-12">
             <header class="agenda-day__meta">
-              <span class="agenda-day__number">02</span>
               <p>Jueves 12 de noviembre</p>
               <h3>Lima</h3>
+              <span class="agenda-day__state" data-day-status="2"></span>
             </header>
             <div class="agenda-day__events">
-              <div class="agenda-event"><time>9:30am</time><div><h4>Encuentro con los Obispos del Perú</h4><p>Capilla del Palacio Arzobispal de Lima</p></div></div>
-              <div class="agenda-event"><time>10:20am</time><div><h4>Celebración de la Hora Media</h4><p>Basílica Catedral de San Juan Apóstol y Evangelista</p></div></div>
-              <div class="agenda-event"><time>11:30am</time><div><h4>Encuentro sobre los Desafíos y las Esperanzas para el Futuro del Pueblo Peruano</h4><p>Plaza Frente a la Catedral</p></div></div>
-              <div class="agenda-event"><time>6:00pm</time><div><h4>Vigilia de Oración con los Jóvenes y Universitarios</h4><p>Estadio Monumental de Lima</p></div></div>
+              <div class="agenda-event" data-event-id="obispos-peru"><time datetime="2026-11-12T09:30-05:00">9:30am</time><div><h4>Encuentro con los Obispos del Perú</h4><p>Capilla del Palacio Arzobispal de Lima</p></div></div>
+              <div class="agenda-event" data-event-id="hora-media"><time datetime="2026-11-12T10:20-05:00">10:20am</time><div><h4>Celebración de la Hora Media</h4><p>Basílica Catedral de San Juan Apóstol y Evangelista</p></div></div>
+              <div class="agenda-event" data-event-id="desafios-futuro"><time datetime="2026-11-12T11:30-05:00">11:30am</time><div><h4>Encuentro sobre los Desafíos y las Esperanzas para el Futuro del Pueblo Peruano</h4><p>Plaza Frente a la Catedral</p></div></div>
+              <div class="agenda-event" data-event-id="vigilia-jovenes"><time datetime="2026-11-12T18:00-05:00">6:00pm</time><div><h4>Vigilia de Oración con los Jóvenes y Universitarios</h4><p>Estadio Monumental de Lima</p></div></div>
             </div>
           </article>
 
-          <article class="agenda-day" id="agenda-day-3" data-agenda-day="3">
+          <article class="agenda-day" id="agenda-day-3" data-agenda-day="3" data-date="2026-11-13">
             <header class="agenda-day__meta">
-              <span class="agenda-day__number">03</span>
               <p>Viernes 13 de noviembre</p>
               <h3>Chiclayo</h3>
+              <span class="agenda-day__state" data-day-status="3"></span>
             </header>
             <div class="agenda-day__events">
-              <div class="agenda-event"><time>10:30am</time><div><h4>Santa Misa</h4><p>Explanada frente a las Pampas de Pimentel</p></div></div>
-              <div class="agenda-event"><time>12:40pm</time><div><h4>Visita privada a la capilla San Óscar A. Romero</h4><p>Capilla San Óscar A. Romero</p></div></div>
-              <div class="agenda-event"><time>4:30pm</time><div><h4>Encuentro con Obispos, Sacerdotes, Religiosos y Religiosas</h4><p>Santuario de Nuestra Señora de la Paz</p></div></div>
-              <div class="agenda-event"><time>5:45pm</time><div><h4>Encuentro con el Mundo Universitario</h4><p>Universidad Católica Santo Toribio de Mogrovejo</p></div></div>
+              <div class="agenda-event" data-event-id="misa-pimentel"><time datetime="2026-11-13T10:30-05:00">10:30am</time><div><h4>Santa Misa</h4><p>Explanada frente a las Pampas de Pimentel</p></div></div>
+              <div class="agenda-event" data-event-id="capilla-romero"><time datetime="2026-11-13T12:40-05:00">12:40pm</time><div><h4>Visita privada a la capilla San Óscar A. Romero</h4><p>Capilla San Óscar A. Romero</p></div></div>
+              <div class="agenda-event" data-event-id="encuentro-clero"><time datetime="2026-11-13T16:30-05:00">4:30pm</time><div><h4>Encuentro con Obispos, Sacerdotes, Religiosos y Religiosas</h4><p>Santuario de Nuestra Señora de la Paz</p></div></div>
+              <div class="agenda-event" data-event-id="mundo-universitario"><time datetime="2026-11-13T17:45-05:00">5:45pm</time><div><h4>Encuentro con el Mundo Universitario</h4><p>Universidad Católica Santo Toribio de Mogrovejo</p></div></div>
             </div>
           </article>
 
-          <article class="agenda-day" id="agenda-day-4" data-agenda-day="4">
+          <article class="agenda-day" id="agenda-day-4" data-agenda-day="4" data-date="2026-11-14">
             <header class="agenda-day__meta">
-              <span class="agenda-day__number">04</span>
               <p>Sábado 14 de noviembre</p>
               <h3>Chiclayo /<br>Succhabamba</h3>
+              <span class="agenda-day__state" data-day-status="4"></span>
             </header>
             <div class="agenda-day__events">
-              <div class="agenda-event"><time>8:00am</time><div><h4>Rito de Coronación de la Virgen Inmaculada</h4><p>Catedral de Santa María</p></div></div>
-              <div class="agenda-event"><time>11:00am</time><div><h4>Santa Misa</h4><p>Explanada de Santa Cruz de Succhabamba</p></div></div>
-              <div class="agenda-event"><time>5:30pm</time><div><h4>Encuentro de Oración con la Comunidad Católica</h4><p>Santuario de Santo Toribio de Mogrovejo</p></div></div>
+              <div class="agenda-event" data-event-id="coronacion-virgen"><time datetime="2026-11-14T08:00-05:00">8:00am</time><div><h4>Rito de Coronación de la Virgen Inmaculada</h4><p>Catedral de Santa María</p></div></div>
+              <div class="agenda-event" data-event-id="misa-succhabamba"><time datetime="2026-11-14T11:00-05:00">11:00am</time><div><h4>Santa Misa</h4><p>Explanada de Santa Cruz de Succhabamba</p></div></div>
+              <div class="agenda-event" data-event-id="oracion-santuario"><time datetime="2026-11-14T17:30-05:00">5:30pm</time><div><h4>Encuentro de Oración con la Comunidad Católica</h4><p>Santuario de Santo Toribio de Mogrovejo</p></div></div>
             </div>
           </article>
 
-          <article class="agenda-day" id="agenda-day-5" data-agenda-day="5">
+          <article class="agenda-day" id="agenda-day-5" data-agenda-day="5" data-date="2026-11-15">
             <header class="agenda-day__meta">
-              <span class="agenda-day__number">05</span>
               <p>Domingo 15 de noviembre</p>
               <h3>Cusco /<br>Pucallpa</h3>
+              <span class="agenda-day__state" data-day-status="5"></span>
             </header>
             <div class="agenda-day__events">
-              <div class="agenda-event"><time>10:30am</time><div><h4>Encuentro con los Fieles y Representantes de la Piedad Popular</h4><p>Parque Arqueológico de Saqsaywaman, Cusco</p></div></div>
-              <div class="agenda-event"><time>11:45am</time><div><h4>Rezo del Ángelus con la Comunidad Católica</h4><p>Plaza frente a la Basílica Catedral, Cusco</p></div></div>
-              <div class="agenda-event"><time>3:00pm</time><div><h4>Encuentro con Misioneros y Representantes de los Pueblos Amazónicos</h4><p>Malecón Puerto Callao, Pucallpa</p></div></div>
-              <div class="agenda-event"><time>4:45pm</time><div><h4>Santa Misa</h4><p>Villa Deportiva Regional Ucayali, Pucallpa</p></div></div>
+              <div class="agenda-event" data-event-id="fieles-cusco"><time datetime="2026-11-15T10:30-05:00">10:30am</time><div><h4>Encuentro con los Fieles y Representantes de la Piedad Popular</h4><p>Parque Arqueológico de Saqsaywaman, Cusco</p></div></div>
+              <div class="agenda-event" data-event-id="angelus-cusco"><time datetime="2026-11-15T11:45-05:00">11:45am</time><div><h4>Rezo del Ángelus con la Comunidad Católica</h4><p>Plaza frente a la Basílica Catedral, Cusco</p></div></div>
+              <div class="agenda-event" data-event-id="pueblos-amazonicos"><time datetime="2026-11-15T15:00-05:00">3:00pm</time><div><h4>Encuentro con Misioneros y Representantes de los Pueblos Amazónicos</h4><p>Malecón Puerto Callao, Pucallpa</p></div></div>
+              <div class="agenda-event" data-event-id="misa-ucayali"><time datetime="2026-11-15T16:45-05:00">4:45pm</time><div><h4>Santa Misa</h4><p>Villa Deportiva Regional Ucayali, Pucallpa</p></div></div>
             </div>
           </article>
 
-          <article class="agenda-day" id="agenda-day-6" data-agenda-day="6">
+          <article class="agenda-day" id="agenda-day-6" data-agenda-day="6" data-date="2026-11-16">
             <header class="agenda-day__meta">
-              <span class="agenda-day__number">06</span>
               <p>Lunes 16 de noviembre</p>
               <h3>Lima</h3>
+              <span class="agenda-day__state" data-day-status="6"></span>
             </header>
             <div class="agenda-day__events">
-              <div class="agenda-event"><time>8:30am</time><div><h4>Visita a la Casa de Acogida de las Hermanitas de los Ancianos Desamparados</h4><p>Lima</p></div></div>
-              <div class="agenda-event"><time>10:30am</time><div><h4>Santa Misa</h4><p>Base Aérea Las Palmas</p></div></div>
-              <div class="agenda-event"><time>1:15pm</time><div><h4>Ceremonia de Despedida</h4><p>Base Aérea del Callao</p></div></div>
+              <div class="agenda-event" data-event-id="casa-acogida"><time datetime="2026-11-16T08:30-05:00">8:30am</time><div><h4>Visita a la Casa de Acogida de las Hermanitas de los Ancianos Desamparados</h4><p>Lima</p></div></div>
+              <div class="agenda-event" data-event-id="misa-las-palmas"><time datetime="2026-11-16T10:30-05:00">10:30am</time><div><h4>Santa Misa</h4><p>Base Aérea Las Palmas</p></div></div>
+              <div class="agenda-event" data-event-id="despedida-callao"><time datetime="2026-11-16T13:15-05:00">1:15pm</time><div><h4>Ceremonia de Despedida</h4><p>Base Aérea del Callao</p></div></div>
             </div>
           </article>
         </div>
@@ -162,7 +186,7 @@
           <div>
             <h3><a href="https://rpp.pe/noticias/leon-xiv">León XIV llega al Perú: las historias que acompañan su visita</a></h3>
             <p>Información verificada, testimonios y reportes desde las ciudades que recibirán al papa.</p>
-            <span>Actualizado hoy</span>
+            <span>Cobertura de RPP Noticias</span>
           </div>
         </article>
 
