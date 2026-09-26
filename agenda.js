@@ -1,16 +1,14 @@
+(() => {
 const agendaDays = [...document.querySelectorAll('[data-agenda-day]')];
 const agendaEvents = [...document.querySelectorAll('[data-event-id]')];
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const agendaReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const isLocalPreview = window.location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(window.location.hostname);
 const framedPreview = (() => {
   try { return window.frameElement?.getAttribute('name') === 'rpp-agenda-live-preview'; }
   catch { return false; }
 })();
-const previewLive = isLocalPreview && (
-  new URLSearchParams(window.location.search).get('vista') === 'en-vivo'
-  || window.name === 'rpp-agenda-live-preview'
-  || framedPreview
-);
+const previewLive = new URLSearchParams(window.location.search).get('vista') === 'en-vivo'
+  || (isLocalPreview && (window.name === 'rpp-agenda-live-preview' || framedPreview));
 
 // Solo la mesa editorial actualiza estos datos tras verificar la cobertura.
 // Las horas programadas y la posición del scroll nunca confirman una actividad.
@@ -224,7 +222,7 @@ const position = document.querySelector('[data-journey-position]');
 const jump = document.querySelector('[data-journey-jump]');
 const jumpLabel = document.querySelector('[data-journey-jump-label]');
 
-if (isLocalPreview && window.parent === window) {
+if ((isLocalPreview || previewLive) && window.parent === window) {
   document.body.classList.toggle('is-live-preview', previewLive);
   const notice = document.createElement('div');
   notice.className = 'agenda-preview-note';
@@ -279,7 +277,7 @@ jump.addEventListener('click', () => {
     : focusEvent.element;
   target.tabIndex = -1;
   target.focus({ preventScroll: true });
-  target.scrollIntoView({ behavior: reduceMotion.matches ? 'instant' : 'smooth', block: 'center' });
+  target.scrollIntoView({ behavior: agendaReduceMotion.matches ? 'instant' : 'smooth', block: 'center' });
 });
 
 // El trazo representa únicamente estados editoriales verificados, nunca el scroll.
@@ -309,7 +307,7 @@ story.addEventListener('toggle', requestJourneyUpdate, true);
 document.fonts?.ready.then(requestJourneyUpdate);
 requestJourneyUpdate();
 
-if ('IntersectionObserver' in window && !reduceMotion.matches) {
+if ('IntersectionObserver' in window && !agendaReduceMotion.matches) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
@@ -320,3 +318,4 @@ if ('IntersectionObserver' in window && !reduceMotion.matches) {
   agendaDays.forEach((day) => observer.observe(day));
   document.body.classList.add('story-motion');
 }
+})();
