@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Seguimiento del recorrido de León XIV por el Perú.">
+  <title>Seguimiento de la visita | León XIV</title>
+  <link rel="icon" href="assets/rpp.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="widget-agenda.css">
+</head>
+<body class="visit-widget">
+  <main class="visit-widget__shell" aria-labelledby="widget-title">
+    <section class="visit-widget__status">
+      <div class="visit-widget__eyebrow">
+        <span class="visit-widget__live-dot" aria-hidden="true"></span>
+        <span data-widget-state>Seguimiento en vivo</span>
+      </div>
+      <div class="visit-widget__heading">
+        <div>
+          <p class="visit-widget__label">León XIV en Perú · 11–16 nov</p>
+          <h1 id="widget-title" data-widget-title>Santa Misa</h1>
+          <p class="visit-widget__detail" data-widget-detail>Chiclayo · Explanada frente a las Pampas de Pimentel</p>
+        </div>
+        <div class="visit-widget__percent" aria-label="Porcentaje de actividades completadas">
+          <strong data-widget-percent>36%</strong>
+          <span>recorrido</span>
+        </div>
+      </div>
+      <div class="visit-widget__progress" role="progressbar" aria-label="Progreso de la visita" aria-valuemin="0" aria-valuemax="100" aria-valuenow="36">
+        <span data-widget-progress></span>
+      </div>
+      <div class="visit-widget__meta">
+        <span><strong data-widget-completed>8</strong> de <strong data-widget-total>22</strong> hitos completados</span>
+        <span data-widget-next>Siguiente: visita privada · 12:40 p. m.</span>
+      </div>
+    </section>
+
+    <section class="visit-widget__route" aria-labelledby="route-title">
+      <div class="visit-widget__route-head">
+        <p class="visit-widget__label" id="route-title">Ruta de la visita</p>
+        <a href="agenda.html">Ver agenda completa <span aria-hidden="true">↗</span></a>
+      </div>
+      <ol class="visit-widget__stops" data-widget-stops>
+        <li class="visit-widget__stop is-complete" data-stop="1">
+          <button type="button" aria-label="Lima, 11 de noviembre, jornada completada">
+            <span class="visit-widget__node">01</span>
+            <span class="visit-widget__city">Lima</span>
+            <span class="visit-widget__date">11 nov</span>
+          </button>
+        </li>
+        <li class="visit-widget__stop is-complete" data-stop="2">
+          <button type="button" aria-label="Lima, 12 de noviembre, jornada completada">
+            <span class="visit-widget__node">02</span>
+            <span class="visit-widget__city">Lima</span>
+            <span class="visit-widget__date">12 nov</span>
+          </button>
+        </li>
+        <li class="visit-widget__stop is-current" data-stop="3">
+          <button type="button" aria-current="step" aria-label="Chiclayo, 13 de noviembre, jornada en vivo">
+            <span class="visit-widget__node">03</span>
+            <span class="visit-widget__city">Chiclayo</span>
+            <span class="visit-widget__date">13 nov</span>
+          </button>
+        </li>
+        <li class="visit-widget__stop" data-stop="4">
+          <button type="button" aria-label="Chiclayo, 14 de noviembre, jornada programada">
+            <span class="visit-widget__node">04</span>
+            <span class="visit-widget__city">Chiclayo</span>
+            <span class="visit-widget__date">14 nov</span>
+          </button>
+        </li>
+        <li class="visit-widget__stop" data-stop="5">
+          <button type="button" aria-label="Cusco y Pucallpa, 15 de noviembre, jornada programada">
+            <span class="visit-widget__node">05</span>
+            <span class="visit-widget__city">Cusco · Pucallpa</span>
+            <span class="visit-widget__date">15 nov</span>
+          </button>
+        </li>
+        <li class="visit-widget__stop" data-stop="6">
+          <button type="button" aria-label="Lima, 16 de noviembre, jornada programada">
+            <span class="visit-widget__node">06</span>
+            <span class="visit-widget__city">Lima</span>
+            <span class="visit-widget__date">16 nov</span>
+          </button>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <script src="widget-agenda.js"></script>
+</body>
+</html>
