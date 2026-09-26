@@ -200,18 +200,6 @@ agendaDays.forEach((day) => {
   if (allCompleted) addCompletedRecap(day);
 });
 
-const progressSummary = document.querySelector('[data-coverage-progress]');
-const completedCities = [...new Set(agendaDays
-  .filter((day) => day.dataset.coverageState === 'completed')
-  .map((day) => day.querySelector('h3').textContent.trim().replace(/\s*\/\s*/, ' · ')))];
-if (liveEvent) {
-  progressSummary.textContent = `${completedCities.length ? `${completedCities.join(' y ')}: cobertura finalizada · ` : ''}${liveEvent.city}: en vivo${previewLive ? ' (simulación)' : ''}`;
-} else if (completedCities.length) {
-  progressSummary.textContent = `${completedCities.join(' y ')}: cobertura finalizada · No hay actividad en vivo confirmada`;
-} else {
-  progressSummary.textContent = `Sin jornadas cerradas · Próxima cita en ${nextEvent?.city || 'la agenda oficial'}`;
-}
-
 const statusSection = document.querySelector('.journey-status');
 const phase = document.querySelector('[data-journey-phase]');
 const title = document.querySelector('[data-journey-title]');

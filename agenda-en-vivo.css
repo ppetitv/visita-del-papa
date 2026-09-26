@@ -3,7 +3,7 @@ html, body { height: 100%; margin: 0; }
 .preview-shell { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; color: #f8f4ec; background: #24231e; font-family: Arial, Helvetica, sans-serif; }
 .preview-shell__bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex: 0 0 auto; min-height: 3.3rem; padding: .6rem clamp(1rem, 4vw, 3rem); border-bottom: 1px solid rgba(255, 255, 255, .2); }
 .preview-shell__bar div { display: flex; align-items: baseline; gap: .9rem; }
-.preview-shell__bar strong { color: #e9aa9e; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+.preview-shell__bar strong { color: #d7b76f; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
 .preview-shell__bar span { color: rgba(248, 244, 236, .75); font-size: .72rem; }
 .preview-shell__bar a { color: #f8f4ec; font-size: .72rem; font-weight: 700; text-underline-offset: .22rem; white-space: nowrap; }
 .preview-shell__bar a:focus-visible { outline: 3px solid #ffe272; outline-offset: 3px; }
