@@ -86,12 +86,13 @@
   setText('[data-focus-detail]', `${focusEvent.day.short} · ${focusEvent.time} · ${focusEvent.place}, ${focusEvent.day.city}`);
   setText('[data-completed-count]', completedCount);
   setText('[data-total-count]', allEvents.length);
-  setText('[data-progress-percent]', `${percent} % de actividades realizadas`);
+  setText('[data-progress-percent]', `${percent} %`);
   const progressFill = select('[data-progress-fill]');
   progressFill.style.transform = `scaleX(${percent / 100})`;
   requestAnimationFrame(() => progressFill.classList.add('is-ready'));
   select('[data-progress-bar]').setAttribute('aria-valuemax', String(allEvents.length));
   select('[data-progress-bar]').setAttribute('aria-valuenow', String(completedCount));
+  select('[data-progress-bar]').setAttribute('aria-valuetext', `${completedCount} de ${allEvents.length} actividades realizadas`);
   select('[data-status-section]').classList.toggle('is-live', Boolean(liveEvent));
   if (preview) select('[data-demo-note]').hidden = false;
 
@@ -138,6 +139,12 @@
       button.classList.toggle('is-selected', active);
       button.setAttribute('aria-pressed', String(active));
     });
+    const dayScroller = select('.journey__scroll');
+    if (dayScroller.scrollWidth > dayScroller.clientWidth) {
+      const activeDay = select(`[data-select-day="${id}"]`);
+      const left = dayScroller.scrollLeft + activeDay.getBoundingClientRect().left - dayScroller.getBoundingClientRect().left - (dayScroller.clientWidth - activeDay.clientWidth) / 2;
+      dayScroller.scrollTo({ left, behavior: shouldAnimate ? 'smooth' : 'auto' });
+    }
     document.querySelectorAll('[data-map-city]').forEach((pin) => {
       pin.classList.toggle('is-selected', day.markers.includes(pin.dataset.mapCity));
     });

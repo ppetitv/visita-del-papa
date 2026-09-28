@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="agenda-mapa.css?v=motion-2">
+  <link rel="stylesheet" href="agenda-mapa.css?v=compact-5">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -31,8 +31,8 @@
       <section class="intro" aria-labelledby="page-title">
         <div>
           <p class="eyebrow">Visita al Perú · 11 al 16 de noviembre de 2026</p>
-          <h1 id="page-title">Así será el recorrido de <em>León XIV</em></h1>
-          <p class="intro__description">De Lima a Chiclayo, Cusco y Pucallpa: revisa dónde estará el papa cada día y a qué hora comenzarán sus actividades.</p>
+          <h1 id="page-title">El recorrido de <em>León XIV</em></h1>
+          <p class="intro__description">Lima, Chiclayo, Cusco y Pucallpa: fechas, horarios y sedes de su visita al Perú.</p>
         </div>
         <div class="intro__stamp" aria-label="Agenda oficial, horarios sujetos a cambios">
           <span>Agenda</span>
@@ -47,39 +47,12 @@
           <h2 id="status-title" data-focus-title>Llegada y Bienvenida Oficial</h2>
           <p class="status__detail" data-focus-detail>Miércoles 11 nov · 5:30 p. m. · Base Aérea del Callao, Lima</p>
         </div>
-        <div class="status__meter">
-          <div class="status__fraction"><strong data-completed-count>0</strong><span>/ <span data-total-count>22</span></span></div>
-          <p>actividades realizadas</p>
-          <div class="status__bar" role="progressbar" aria-label="Actividades realizadas" aria-valuemin="0" aria-valuemax="22" aria-valuenow="0" data-progress-bar><span data-progress-fill></span></div>
-          <span class="status__percent" data-progress-percent>0 % de actividades realizadas</span>
-        </div>
-      </section>
-
-      <section class="journey" aria-labelledby="journey-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Del 11 al 16 de noviembre</p>
-            <h2 id="journey-title">La visita, día por día</h2>
-          </div>
-          <p>Elige un día para ver los horarios, las sedes y las ciudades que visitará.</p>
-        </div>
-        <div class="journey__scroll">
-          <div class="journey__days" aria-label="Seleccionar jornada" data-day-picker>
-            <button class="journey__day is-selected" type="button" data-select-day="1" aria-pressed="true"><span class="journey__date">11 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
-            <button class="journey__day" type="button" data-select-day="2" aria-pressed="false"><span class="journey__date">12 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
-            <button class="journey__day" type="button" data-select-day="3" aria-pressed="false"><span class="journey__date">13 <small>nov</small></span><span class="journey__city">Chiclayo</span><span class="journey__state"></span></button>
-            <button class="journey__day" type="button" data-select-day="4" aria-pressed="false"><span class="journey__date">14 <small>nov</small></span><span class="journey__city">Chiclayo · Succhabamba</span><span class="journey__state"></span></button>
-            <button class="journey__day" type="button" data-select-day="5" aria-pressed="false"><span class="journey__date">15 <small>nov</small></span><span class="journey__city">Cusco · Pucallpa</span><span class="journey__state"></span></button>
-            <button class="journey__day" type="button" data-select-day="6" aria-pressed="false"><span class="journey__date">16 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
-          </div>
-        </div>
       </section>
 
       <div class="explore">
         <section class="map-panel" aria-labelledby="map-title">
           <div class="panel-heading">
             <div><p class="eyebrow">En el mapa</p><h2 id="map-title">Las ciudades de su recorrido</h2></div>
-            <span class="panel-heading__index">01 / 02</span>
           </div>
           <div class="map-panel__stage">
             <svg class="peru-map" viewBox="0 0 620 570" role="group" aria-labelledby="map-svg-title map-svg-desc">
@@ -104,13 +77,30 @@
             </svg>
           </div>
           <div class="map-panel__caption"><span class="map-panel__marker" aria-hidden="true"></span><p data-map-caption><strong>Lima</strong> · 11 de noviembre</p></div>
+          <section class="journey" aria-labelledby="journey-title">
+            <div class="journey__summary">
+              <h3 id="journey-title">La visita, día por día</h3>
+              <div class="status__fraction"><strong data-completed-count>0</strong><span>de <span data-total-count>22</span> actividades realizadas</span></div>
+            </div>
+            <div class="status__bar" role="progressbar" aria-label="Actividades realizadas" aria-valuemin="0" aria-valuemax="22" aria-valuenow="0" aria-valuetext="0 de 22 actividades realizadas" data-progress-bar><span data-progress-fill></span></div>
+            <div class="journey__guide"><span>Elige un día para ver sus actividades</span><span class="status__percent" data-progress-percent>0 %</span></div>
+            <div class="journey__scroll">
+              <div class="journey__days" role="group" aria-label="Seleccionar jornada" data-day-picker>
+                <button class="journey__day is-selected" type="button" data-select-day="1" aria-pressed="true"><span class="journey__date">11 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
+                <button class="journey__day" type="button" data-select-day="2" aria-pressed="false"><span class="journey__date">12 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
+                <button class="journey__day" type="button" data-select-day="3" aria-pressed="false"><span class="journey__date">13 <small>nov</small></span><span class="journey__city">Chiclayo</span><span class="journey__state"></span></button>
+                <button class="journey__day" type="button" data-select-day="4" aria-pressed="false"><span class="journey__date">14 <small>nov</small></span><span class="journey__city">Chiclayo · Succhabamba</span><span class="journey__state"></span></button>
+                <button class="journey__day" type="button" data-select-day="5" aria-pressed="false"><span class="journey__date">15 <small>nov</small></span><span class="journey__city">Cusco · Pucallpa</span><span class="journey__state"></span></button>
+                <button class="journey__day" type="button" data-select-day="6" aria-pressed="false"><span class="journey__date">16 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
+              </div>
+            </div>
+          </section>
           <p class="map-panel__note">El mapa muestra las ciudades del itinerario; no indica dónde está el papa en tiempo real. La visita a Succhabamba figura en la agenda del 14 de noviembre.</p>
         </section>
 
         <section class="schedule-panel" id="cronograma" aria-labelledby="schedule-title">
           <div class="panel-heading">
             <div><p class="eyebrow" data-day-date>Miércoles 11 de noviembre</p><h2 id="schedule-title" data-day-title aria-live="polite">Lima</h2></div>
-            <span class="panel-heading__index">02 / 02</span>
           </div>
           <p class="schedule-panel__intro" data-day-intro>4 actividades previstas para el 11 de noviembre.</p>
           <ol class="event-list" data-event-list>
@@ -128,6 +118,6 @@
       </footer>
     </div>
   </main>
-  <script src="agenda-mapa.js?v=motion-2"></script>
+  <script src="agenda-mapa.js?v=compact-5"></script>
 </body>
 </html>
