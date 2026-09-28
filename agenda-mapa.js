@@ -162,7 +162,7 @@
       const details = document.createElement('div');
       const badge = document.createElement('span');
       badge.className = `event-list__badge is-${state === 'completed' ? 'completed' : state === 'live' ? 'live' : 'upcoming'}`;
-      badge.textContent = state === 'completed' ? 'Finalizada' : state === 'live' ? 'En vivo' : 'Por iniciar';
+      badge.textContent = state === 'completed' ? 'Finalizada' : state === 'live' ? 'En vivo' : 'Programado';
       details.append(badge);
       const title = document.createElement('h3');
       title.textContent = item.title;
