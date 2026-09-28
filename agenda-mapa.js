@@ -94,6 +94,9 @@
   select('[data-progress-bar]').setAttribute('aria-valuenow', String(completedCount));
   select('[data-progress-bar]').setAttribute('aria-valuetext', `${completedCount} de ${allEvents.length} actividades realizadas`);
   select('[data-status-section]').classList.toggle('is-live', Boolean(liveEvent));
+  document.querySelectorAll('[data-map-city]').forEach((pin) => {
+    pin.classList.toggle('is-current', Boolean(liveEvent && liveEvent.day.markers.includes(pin.dataset.mapCity)));
+  });
 
   for (const day of days) {
     const control = select(`[data-select-day="${day.id}"]`);
