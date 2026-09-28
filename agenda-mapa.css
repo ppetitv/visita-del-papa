@@ -30,8 +30,6 @@ button { font: inherit; }
 .masthead__nav a { font-size: .68rem; font-weight: 800; letter-spacing: .045em; text-decoration: none; text-transform: uppercase; }
 .masthead__nav a:hover { color: var(--gold-dark); }
 .masthead__edition { margin-left: auto; color: var(--muted); font-size: .61rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.demo-note { margin: 0; padding: .55rem 1rem; color: #302817; background: #ead6a5; font-size: .67rem; font-weight: 800; text-align: center; }
-.demo-note[hidden] { display: none; }
 
 .intro { display: flex; justify-content: space-between; align-items: end; gap: 1.5rem; padding: clamp(1.6rem, 3vw, 2.5rem) 0 1.25rem; }
 .eyebrow { margin: 0 0 .8rem; color: var(--gold-dark); font-size: .63rem; font-weight: 800; letter-spacing: .16em; line-height: 1.4; text-transform: uppercase; }

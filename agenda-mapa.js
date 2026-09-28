@@ -81,7 +81,7 @@
   const select = (selector) => document.querySelector(selector);
   const setText = (selector, value) => { const element = select(selector); if (element) element.textContent = value; };
 
-  setText('[data-phase]', preview && liveEvent ? 'Vista de prueba · En vivo' : liveEvent ? 'En vivo' : completedCount === allEvents.length ? 'La visita terminó' : completedCount === 0 ? 'La visita comienza el 11 de noviembre' : 'Próxima actividad');
+  setText('[data-phase]', liveEvent ? 'En vivo' : completedCount === allEvents.length ? 'La visita terminó' : completedCount === 0 ? 'La visita comienza el 11 de noviembre' : 'Próxima actividad');
   setText('[data-focus-title]', focusEvent.title);
   setText('[data-focus-detail]', `${focusEvent.day.short} · ${focusEvent.time} · ${focusEvent.place}, ${focusEvent.day.city}`);
   setText('[data-completed-count]', completedCount);
@@ -94,7 +94,6 @@
   select('[data-progress-bar]').setAttribute('aria-valuenow', String(completedCount));
   select('[data-progress-bar]').setAttribute('aria-valuetext', `${completedCount} de ${allEvents.length} actividades realizadas`);
   select('[data-status-section]').classList.toggle('is-live', Boolean(liveEvent));
-  if (preview) select('[data-demo-note]').hidden = false;
 
   for (const day of days) {
     const control = select(`[data-select-day="${day.id}"]`);
@@ -161,7 +160,7 @@
       if (state === 'live' || item.id === focusEvent.id && state === 'scheduled') {
         const badge = document.createElement('span');
         badge.className = 'event-list__badge';
-        badge.textContent = state === 'live' ? preview ? 'En vivo · vista de prueba' : 'En vivo' : 'Próxima actividad';
+        badge.textContent = state === 'live' ? 'En vivo' : 'Próxima actividad';
         details.append(badge);
       }
       const title = document.createElement('h3');
