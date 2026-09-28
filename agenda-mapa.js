@@ -14,7 +14,7 @@
   const days = [
     {
       id: 1, date: 'Miércoles 11 de noviembre', short: 'Mié 11 nov', city: 'Lima', markers: ['lima'],
-      mapCaption: 'Lima · Jornadas del 11 y 12 de noviembre',
+      mapCaption: 'Lima · 11 de noviembre',
       events: [
         event('llegada-callao', '5:30 p. m.', '2026-11-11T17:30-05:00', 'Llegada y Bienvenida Oficial', 'Base Aérea del Callao'),
         event('bienvenida-palacio', '6:15 p. m.', '2026-11-11T18:15-05:00', 'Ceremonia de Bienvenida en el Palacio de Gobierno', 'Palacio de Gobierno, Lima'),
@@ -24,7 +24,7 @@
     },
     {
       id: 2, date: 'Jueves 12 de noviembre', short: 'Jue 12 nov', city: 'Lima', markers: ['lima'],
-      mapCaption: 'Lima · Jornadas del 11 y 12 de noviembre',
+      mapCaption: 'Lima · 12 de noviembre',
       events: [
         event('obispos-peru', '9:30 a. m.', '2026-11-12T09:30-05:00', 'Encuentro con los Obispos del Perú', 'Capilla del Palacio Arzobispal de Lima'),
         event('hora-media', '10:20 a. m.', '2026-11-12T10:20-05:00', 'Celebración de la Hora Media', 'Basílica Catedral de San Juan Apóstol y Evangelista'),
@@ -34,7 +34,7 @@
     },
     {
       id: 3, date: 'Viernes 13 de noviembre', short: 'Vie 13 nov', city: 'Chiclayo', markers: ['chiclayo'],
-      mapCaption: 'Chiclayo · Jornadas del 13 y 14 de noviembre',
+      mapCaption: 'Chiclayo · 13 de noviembre',
       events: [
         event('misa-pimentel', '10:30 a. m.', '2026-11-13T10:30-05:00', 'Santa Misa', 'Explanada frente a las Pampas de Pimentel'),
         event('capilla-romero', '12:40 p. m.', '2026-11-13T12:40-05:00', 'Visita privada a la capilla San Óscar A. Romero', 'Capilla San Óscar A. Romero'),
@@ -43,7 +43,7 @@
       ],
     },
     {
-      id: 4, date: 'Sábado 14 de noviembre', short: 'Sáb 14 nov', city: 'Chiclayo / Succhabamba', markers: ['chiclayo'],
+      id: 4, date: 'Sábado 14 de noviembre', short: 'Sáb 14 nov', city: 'Chiclayo y Succhabamba', markers: ['chiclayo'],
       mapCaption: 'Chiclayo y Succhabamba · 14 de noviembre',
       events: [
         event('coronacion-virgen', '8:00 a. m.', '2026-11-14T08:00-05:00', 'Rito de Coronación de la Virgen Inmaculada', 'Catedral de Santa María'),
@@ -52,7 +52,7 @@
       ],
     },
     {
-      id: 5, date: 'Domingo 15 de noviembre', short: 'Dom 15 nov', city: 'Cusco / Pucallpa', markers: ['cusco', 'pucallpa'],
+      id: 5, date: 'Domingo 15 de noviembre', short: 'Dom 15 nov', city: 'Cusco y Pucallpa', markers: ['cusco', 'pucallpa'],
       mapCaption: 'Cusco y Pucallpa · 15 de noviembre',
       events: [
         event('fieles-cusco', '10:30 a. m.', '2026-11-15T10:30-05:00', 'Encuentro con los Fieles y Representantes de la Piedad Popular', 'Parque Arqueológico de Saqsaywaman, Cusco'),
@@ -63,7 +63,7 @@
     },
     {
       id: 6, date: 'Lunes 16 de noviembre', short: 'Lun 16 nov', city: 'Lima', markers: ['lima'],
-      mapCaption: 'Lima · Jornada de despedida, 16 de noviembre',
+      mapCaption: 'Lima · 16 de noviembre',
       events: [
         event('casa-acogida', '8:30 a. m.', '2026-11-16T08:30-05:00', 'Visita a la Casa de Acogida de las Hermanitas de los Ancianos Desamparados', 'Lima'),
         event('misa-las-palmas', '10:30 a. m.', '2026-11-16T10:30-05:00', 'Santa Misa', 'Base Aérea Las Palmas'),
@@ -81,13 +81,15 @@
   const select = (selector) => document.querySelector(selector);
   const setText = (selector, value) => { const element = select(selector); if (element) element.textContent = value; };
 
-  setText('[data-phase]', preview && liveEvent ? 'Simulación · En vivo ahora' : liveEvent ? 'En vivo ahora' : completedCount === allEvents.length ? 'Cobertura finalizada' : completedCount === 0 ? 'Cobertura por iniciar' : 'Próximo en agenda');
+  setText('[data-phase]', preview && liveEvent ? 'Vista de prueba · En vivo' : liveEvent ? 'En vivo' : completedCount === allEvents.length ? 'La visita terminó' : completedCount === 0 ? 'La visita comienza el 11 de noviembre' : 'Próxima actividad');
   setText('[data-focus-title]', focusEvent.title);
   setText('[data-focus-detail]', `${focusEvent.day.short} · ${focusEvent.time} · ${focusEvent.place}, ${focusEvent.day.city}`);
   setText('[data-completed-count]', completedCount);
   setText('[data-total-count]', allEvents.length);
-  setText('[data-progress-percent]', `${percent} % verificado`);
-  select('[data-progress-fill]').style.width = `${percent}%`;
+  setText('[data-progress-percent]', `${percent} % de actividades realizadas`);
+  const progressFill = select('[data-progress-fill]');
+  progressFill.style.transform = `scaleX(${percent / 100})`;
+  requestAnimationFrame(() => progressFill.classList.add('is-ready'));
   select('[data-progress-bar]').setAttribute('aria-valuemax', String(allEvents.length));
   select('[data-progress-bar]').setAttribute('aria-valuenow', String(completedCount));
   select('[data-status-section]').classList.toggle('is-live', Boolean(liveEvent));
@@ -103,20 +105,34 @@
   }
 
   const eventList = select('[data-event-list]');
-  let selectedDay = preview && liveEvent ? liveEvent.day.id : 1;
-  const renderDay = (id) => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let selectedDay = null;
+  const animateUpdatedText = (element) => {
+    if (reducedMotion.matches || !element.animate) return;
+    element.animate(
+      [{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'translateY(0)' }],
+      { duration: 360, easing: 'cubic-bezier(.22, 1, .36, 1)' },
+    );
+  };
+  const renderDay = (id, animate = true) => {
     const day = days.find((item) => item.id === id);
-    if (!day) return;
+    if (!day || selectedDay === id) return;
+    const shouldAnimate = animate && !reducedMotion.matches;
     selectedDay = id;
     setText('[data-day-date]', day.date);
     setText('[data-day-title]', day.city);
-    setText('[data-day-intro]', `${day.events.length} actividades previstas para esta jornada.`);
+    setText('[data-day-intro]', `${day.events.length} actividades en ${day.city} para el ${day.date.toLowerCase()}.`);
     const caption = select('[data-map-caption]');
     caption.replaceChildren();
     const strong = document.createElement('strong');
     const [city, ...rest] = day.mapCaption.split(' · ');
     strong.textContent = city;
     caption.append(strong, document.createTextNode(rest.length ? ` · ${rest.join(' · ')}` : ''));
+    if (shouldAnimate) {
+      for (const selector of ['[data-day-date]', '[data-day-title]', '[data-day-intro]', '[data-map-caption]']) {
+        animateUpdatedText(select(selector));
+      }
+    }
     document.querySelectorAll('[data-select-day]').forEach((button) => {
       const active = Number(button.dataset.selectDay) === id;
       button.classList.toggle('is-selected', active);
@@ -126,10 +142,11 @@
       pin.classList.toggle('is-selected', day.markers.includes(pin.dataset.mapCity));
     });
     const fragment = document.createDocumentFragment();
-    day.events.forEach((item) => {
+    day.events.forEach((item, index) => {
       const state = statuses[item.id] || 'scheduled';
       const row = document.createElement('li');
-      row.className = `event-list__item${state === 'completed' ? ' is-completed' : ''}${state === 'live' ? ' is-live' : ''}${item.id === focusEvent.id && state === 'scheduled' ? ' is-next' : ''}`;
+      row.className = `event-list__item${state === 'completed' ? ' is-completed' : ''}${state === 'live' ? ' is-live' : ''}${item.id === focusEvent.id && state === 'scheduled' ? ' is-next' : ''}${shouldAnimate ? ' is-entering' : ''}`;
+      if (shouldAnimate) row.style.setProperty('--enter-delay', `${Math.min(index, 3) * 60}ms`);
       const time = document.createElement('time');
       time.dateTime = item.iso;
       time.textContent = item.time;
@@ -137,7 +154,7 @@
       if (state === 'live' || item.id === focusEvent.id && state === 'scheduled') {
         const badge = document.createElement('span');
         badge.className = 'event-list__badge';
-        badge.textContent = state === 'live' ? preview ? 'En vivo · simulación' : 'En vivo' : 'Próximo en agenda';
+        badge.textContent = state === 'live' ? preview ? 'En vivo · vista de prueba' : 'En vivo' : 'Próxima actividad';
         details.append(badge);
       }
       const title = document.createElement('h3');
@@ -160,5 +177,23 @@
     renderDay(Number(pin.dataset.mapDay));
     if (window.matchMedia('(max-width: 700px)').matches) select('#cronograma').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
   }));
-  renderDay(selectedDay);
+  renderDay(preview && liveEvent ? liveEvent.day.id : 1, false);
+
+  if (!reducedMotion.matches) {
+    select('.intro').classList.add('is-motion-entering');
+    select('.status').classList.add('is-motion-entering');
+    const sections = document.querySelectorAll('.journey, .map-panel, .schedule-panel');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-motion-entering');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.12 });
+      sections.forEach((section) => observer.observe(section));
+    } else {
+      sections.forEach((section) => section.classList.add('is-motion-entering'));
+    }
+  }
 })();

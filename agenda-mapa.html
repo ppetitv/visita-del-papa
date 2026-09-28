@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sigue las jornadas, ciudades y actividades de la visita de León XIV al Perú.">
-  <title>Seguimiento de la visita | León XIV en Perú</title>
+  <meta name="description" content="Consulta la agenda del papa León XIV en el Perú: fechas, horarios y sedes de sus actividades en Lima, Chiclayo, Cusco y Pucallpa.">
+  <title>Agenda y recorrido del papa León XIV en el Perú | RPP</title>
   <link rel="icon" href="assets/rpp.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="agenda-mapa.css">
+  <link rel="stylesheet" href="agenda-mapa.css?v=motion-2">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -21,57 +21,56 @@
         <a href="index.html">Noticias</a>
         <a href="agenda.html">Agenda oficial</a>
       </nav>
-      <span class="masthead__edition">Especial · León XIV en Perú</span>
+      <span class="masthead__edition">León XIV en el Perú · RPP</span>
     </div>
   </header>
 
   <main id="contenido">
-    <p class="demo-note" data-demo-note hidden>Vista de simulación: Chiclayo en vivo. No corresponde a una transmisión real.</p>
+    <p class="demo-note" data-demo-note hidden>Vista de prueba: la jornada en Chiclayo se muestra en vivo solo para revisar el diseño. No es una transmisión real.</p>
     <div class="wrap">
       <section class="intro" aria-labelledby="page-title">
         <div>
-          <p class="eyebrow">Cobertura especial · 11–16 de noviembre de 2026</p>
-          <h1 id="page-title">El recorrido de <em>León XIV</em></h1>
-          <p class="intro__description">Seis jornadas, cuatro ciudades y una agenda en evolución. Explora cada parada y consulta los horarios publicados para su visita al Perú.</p>
+          <p class="eyebrow">Visita al Perú · 11 al 16 de noviembre de 2026</p>
+          <h1 id="page-title">Así será el recorrido de <em>León XIV</em></h1>
+          <p class="intro__description">De Lima a Chiclayo, Cusco y Pucallpa: revisa dónde estará el papa cada día y a qué hora comenzarán sus actividades.</p>
         </div>
-        <div class="intro__stamp" aria-label="Itinerario anunciado, sujeto a cambios">
-          <span>Itinerario</span>
-          <strong>anunciado</strong>
-          <small>Sujeto a cambios</small>
+        <div class="intro__stamp" aria-label="Agenda oficial, horarios sujetos a cambios">
+          <span>Agenda</span>
+          <strong>oficial</strong>
+          <small>Horarios sujetos a cambios</small>
         </div>
       </section>
 
       <section class="status" aria-labelledby="status-title" data-status-section>
         <div class="status__story">
-          <p class="status__eyebrow"><span class="status__signal" aria-hidden="true"></span><span data-phase>Cobertura por iniciar</span></p>
+          <p class="status__eyebrow"><span class="status__signal" aria-hidden="true"></span><span data-phase>La visita comienza el 11 de noviembre</span></p>
           <h2 id="status-title" data-focus-title>Llegada y Bienvenida Oficial</h2>
           <p class="status__detail" data-focus-detail>Miércoles 11 nov · 5:30 p. m. · Base Aérea del Callao, Lima</p>
-          <a class="status__link" href="agenda.html">Ver agenda detallada <span aria-hidden="true">↗</span></a>
         </div>
         <div class="status__meter">
           <div class="status__fraction"><strong data-completed-count>0</strong><span>/ <span data-total-count>22</span></span></div>
-          <p>actividades con cobertura finalizada</p>
-          <div class="status__bar" role="progressbar" aria-label="Actividades con cobertura finalizada" aria-valuemin="0" aria-valuemax="22" aria-valuenow="0" data-progress-bar><span data-progress-fill></span></div>
-          <span class="status__percent" data-progress-percent>0 % verificado</span>
+          <p>actividades realizadas</p>
+          <div class="status__bar" role="progressbar" aria-label="Actividades realizadas" aria-valuemin="0" aria-valuemax="22" aria-valuenow="0" data-progress-bar><span data-progress-fill></span></div>
+          <span class="status__percent" data-progress-percent>0 % de actividades realizadas</span>
         </div>
       </section>
 
       <section class="journey" aria-labelledby="journey-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">De Lima a Chiclayo, Cusco y Pucallpa</p>
-            <h2 id="journey-title">Jornada por jornada</h2>
+            <p class="eyebrow">Del 11 al 16 de noviembre</p>
+            <h2 id="journey-title">La visita, día por día</h2>
           </div>
-          <p>Elige una fecha para consultar sus actividades y ubicarla en el mapa.</p>
+          <p>Elige un día para ver los horarios, las sedes y las ciudades que visitará.</p>
         </div>
         <div class="journey__scroll">
           <div class="journey__days" aria-label="Seleccionar jornada" data-day-picker>
-            <button class="journey__day is-selected" type="button" data-select-day="1" aria-pressed="true"><span class="journey__date">11 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state">Inicio</span></button>
-            <button class="journey__day" type="button" data-select-day="2" aria-pressed="false"><span class="journey__date">12 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state">Jornada 2</span></button>
-            <button class="journey__day" type="button" data-select-day="3" aria-pressed="false"><span class="journey__date">13 <small>nov</small></span><span class="journey__city">Chiclayo</span><span class="journey__state">Jornada 3</span></button>
-            <button class="journey__day" type="button" data-select-day="4" aria-pressed="false"><span class="journey__date">14 <small>nov</small></span><span class="journey__city">Chiclayo · Succhabamba</span><span class="journey__state">Jornada 4</span></button>
-            <button class="journey__day" type="button" data-select-day="5" aria-pressed="false"><span class="journey__date">15 <small>nov</small></span><span class="journey__city">Cusco · Pucallpa</span><span class="journey__state">Jornada 5</span></button>
-            <button class="journey__day" type="button" data-select-day="6" aria-pressed="false"><span class="journey__date">16 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state">Cierre</span></button>
+            <button class="journey__day is-selected" type="button" data-select-day="1" aria-pressed="true"><span class="journey__date">11 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
+            <button class="journey__day" type="button" data-select-day="2" aria-pressed="false"><span class="journey__date">12 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
+            <button class="journey__day" type="button" data-select-day="3" aria-pressed="false"><span class="journey__date">13 <small>nov</small></span><span class="journey__city">Chiclayo</span><span class="journey__state"></span></button>
+            <button class="journey__day" type="button" data-select-day="4" aria-pressed="false"><span class="journey__date">14 <small>nov</small></span><span class="journey__city">Chiclayo · Succhabamba</span><span class="journey__state"></span></button>
+            <button class="journey__day" type="button" data-select-day="5" aria-pressed="false"><span class="journey__date">15 <small>nov</small></span><span class="journey__city">Cusco · Pucallpa</span><span class="journey__state"></span></button>
+            <button class="journey__day" type="button" data-select-day="6" aria-pressed="false"><span class="journey__date">16 <small>nov</small></span><span class="journey__city">Lima</span><span class="journey__state"></span></button>
           </div>
         </div>
       </section>
@@ -79,33 +78,33 @@
       <div class="explore">
         <section class="map-panel" aria-labelledby="map-title">
           <div class="panel-heading">
-            <div><p class="eyebrow">Territorio</p><h2 id="map-title">El mapa de la visita</h2></div>
+            <div><p class="eyebrow">En el mapa</p><h2 id="map-title">Las ciudades de su recorrido</h2></div>
             <span class="panel-heading__index">01 / 02</span>
           </div>
           <div class="map-panel__stage">
             <svg class="peru-map" viewBox="0 0 620 570" role="group" aria-labelledby="map-svg-title map-svg-desc">
               <title id="map-svg-title">Mapa del recorrido de León XIV por el Perú</title>
-              <desc id="map-svg-desc">Se señalan Lima, Chiclayo, Cusco y Pucallpa. Selecciona una ciudad para consultar su jornada.</desc>
+              <desc id="map-svg-desc">Se señalan Lima, Chiclayo, Cusco y Pucallpa. Selecciona una ciudad para consultar sus actividades.</desc>
               <image href="assets/peru-regiones.svg" x="0" y="0" width="620" height="570" />
               <g class="peru-map__route" aria-hidden="true">
                 <path d="M251.5 366.3 Q174 314 171.8 215.9 Q290 257 396.2 408.6 Q409 313 322.5 261.7 Q267 302 251.5 366.3" />
               </g>
-              <a href="#cronograma" class="peru-map__pin is-selected" data-map-day="1" data-map-city="lima" aria-label="Lima: ver jornadas del 11 y 12 de noviembre">
+              <a href="#cronograma" class="peru-map__pin is-selected" data-map-day="1" data-map-city="lima" aria-label="Lima: ver actividades del 11 de noviembre">
                 <circle class="peru-map__halo" cx="251.5" cy="366.3" r="19" /><circle class="peru-map__point" cx="251.5" cy="366.3" r="7" /><text x="271" y="371">Lima</text>
               </a>
-              <a href="#cronograma" class="peru-map__pin" data-map-day="3" data-map-city="chiclayo" aria-label="Chiclayo: ver jornada del 13 de noviembre">
+              <a href="#cronograma" class="peru-map__pin" data-map-day="3" data-map-city="chiclayo" aria-label="Chiclayo: ver actividades del 13 de noviembre">
                 <circle class="peru-map__halo" cx="171.8" cy="215.9" r="19" /><circle class="peru-map__point" cx="171.8" cy="215.9" r="7" /><text x="191" y="220">Chiclayo</text>
               </a>
-              <a href="#cronograma" class="peru-map__pin" data-map-day="5" data-map-city="pucallpa" aria-label="Pucallpa: ver jornada del 15 de noviembre">
+              <a href="#cronograma" class="peru-map__pin" data-map-day="5" data-map-city="pucallpa" aria-label="Pucallpa: ver actividades del 15 de noviembre">
                 <circle class="peru-map__halo" cx="322.5" cy="261.7" r="19" /><circle class="peru-map__point" cx="322.5" cy="261.7" r="7" /><text x="342" y="266">Pucallpa</text>
               </a>
-              <a href="#cronograma" class="peru-map__pin" data-map-day="5" data-map-city="cusco" aria-label="Cusco: ver jornada del 15 de noviembre">
+              <a href="#cronograma" class="peru-map__pin" data-map-day="5" data-map-city="cusco" aria-label="Cusco: ver actividades del 15 de noviembre">
                 <circle class="peru-map__halo" cx="396.2" cy="408.6" r="19" /><circle class="peru-map__point" cx="396.2" cy="408.6" r="7" /><text x="416" y="413">Cusco</text>
               </a>
             </svg>
           </div>
-          <div class="map-panel__caption"><span class="map-panel__marker" aria-hidden="true"></span><p data-map-caption><strong>Lima</strong> · Jornadas del 11 y 12 de noviembre</p></div>
-          <p class="map-panel__note">El trazo conecta las ciudades señaladas y no indica una ubicación en tiempo real. La parada en Succhabamba se detalla en el cronograma.</p>
+          <div class="map-panel__caption"><span class="map-panel__marker" aria-hidden="true"></span><p data-map-caption><strong>Lima</strong> · 11 de noviembre</p></div>
+          <p class="map-panel__note">El mapa muestra las ciudades del itinerario; no indica dónde está el papa en tiempo real. La visita a Succhabamba figura en la agenda del 14 de noviembre.</p>
         </section>
 
         <section class="schedule-panel" id="cronograma" aria-labelledby="schedule-title">
@@ -113,23 +112,22 @@
             <div><p class="eyebrow" data-day-date>Miércoles 11 de noviembre</p><h2 id="schedule-title" data-day-title aria-live="polite">Lima</h2></div>
             <span class="panel-heading__index">02 / 02</span>
           </div>
-          <p class="schedule-panel__intro" data-day-intro>Cuatro actividades previstas para la primera jornada.</p>
+          <p class="schedule-panel__intro" data-day-intro>4 actividades previstas para el 11 de noviembre.</p>
           <ol class="event-list" data-event-list>
-            <li class="event-list__item is-next"><time datetime="2026-11-11T17:30-05:00">5:30 p. m.</time><div><span class="event-list__badge">Primera actividad</span><h3>Llegada y Bienvenida Oficial</h3><p>Base Aérea del Callao</p></div></li>
+            <li class="event-list__item is-next"><time datetime="2026-11-11T17:30-05:00">5:30 p. m.</time><div><span class="event-list__badge">Próxima actividad</span><h3>Llegada y Bienvenida Oficial</h3><p>Base Aérea del Callao</p></div></li>
             <li class="event-list__item"><time datetime="2026-11-11T18:15-05:00">6:15 p. m.</time><div><h3>Ceremonia de Bienvenida en el Palacio de Gobierno</h3><p>Palacio de Gobierno, Lima</p></div></li>
             <li class="event-list__item"><time datetime="2026-11-11T18:45-05:00">6:45 p. m.</time><div><h3>Visita a la Presidente de la República</h3><p>Palacio de Gobierno</p></div></li>
             <li class="event-list__item"><time datetime="2026-11-11T19:45-05:00">7:45 p. m.</time><div><h3>Encuentro con las Autoridades, la Sociedad Civil y el Cuerpo Diplomático</h3><p>Gran Teatro Nacional</p></div></li>
           </ol>
-          <a class="schedule-panel__link" href="agenda.html">Consultar la agenda completa <span aria-hidden="true">→</span></a>
         </section>
       </div>
 
       <footer class="page-note">
-        <p>Horarios y sedes de la agenda publicada. Los estados de cobertura se actualizan tras verificación editorial y pueden cambiar.</p>
+        <p>Los horarios y las sedes pueden cambiar. RPP actualizará esta agenda cuando se anuncien modificaciones oficiales.</p>
         <span>© 2026, Grupo RPP.</span>
       </footer>
     </div>
   </main>
-  <script src="agenda-mapa.js"></script>
+  <script src="agenda-mapa.js?v=motion-2"></script>
 </body>
 </html>
