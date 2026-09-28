@@ -92,7 +92,7 @@
   requestAnimationFrame(() => progressFill.classList.add('is-ready'));
   select('[data-progress-bar]').setAttribute('aria-valuemax', String(allEvents.length));
   select('[data-progress-bar]').setAttribute('aria-valuenow', String(completedCount));
-  select('[data-progress-bar]').setAttribute('aria-valuetext', `${completedCount} de ${allEvents.length} actividades realizadas`);
+  select('[data-progress-bar]').setAttribute('aria-valuetext', `${completedCount} actividades realizadas de ${allEvents.length}`);
   select('[data-status-section]').classList.toggle('is-live', Boolean(liveEvent));
   document.querySelectorAll('[data-map-city]').forEach((pin) => {
     pin.classList.toggle('is-current', Boolean(liveEvent && liveEvent.day.markers.includes(pin.dataset.mapCity)));
