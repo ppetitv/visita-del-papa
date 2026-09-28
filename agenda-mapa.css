@@ -114,7 +114,10 @@ button { font: inherit; }
 .event-list__item time { padding-top: .15rem; color: var(--gold-dark); font-size: .72rem; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .event-list__item h3 { margin: .1rem 0 .25rem; font-size: .85rem; font-weight: 800; letter-spacing: -.025em; line-height: 1.35; }
 .event-list__item p { margin: 0; color: var(--muted); font-size: .68rem; line-height: 1.4; }
-.event-list__badge { display: inline-block; margin-bottom: .2rem; color: var(--gold-dark); font-size: .52rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.event-list__badge { display: inline-flex; align-items: center; width: fit-content; min-height: 1.15rem; margin-bottom: .28rem; padding: .16rem .38rem; border: 1px solid transparent; border-radius: 999px; font-size: .52rem; font-weight: 800; letter-spacing: .075em; line-height: 1; text-transform: uppercase; }
+.event-list__badge.is-completed { border-color: #d9d2c4; background: #ece8df; color: #625c50; }
+.event-list__badge.is-live { border-color: #c6aa72; background: #f3ead2; color: #725316; }
+.event-list__badge.is-upcoming { border-color: #e0dbd1; background: #f8f6f1; color: #777166; }
 
 .page-note { display: flex; justify-content: space-between; gap: 2rem; padding: 1.4rem 0 2.3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .65rem; line-height: 1.5; }
 .page-note p { max-width: 42rem; margin: 0; }

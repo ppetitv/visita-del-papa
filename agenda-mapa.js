@@ -151,18 +151,16 @@
     day.events.forEach((item, index) => {
       const state = statuses[item.id] || 'scheduled';
       const row = document.createElement('li');
-      row.className = `event-list__item${state === 'completed' ? ' is-completed' : ''}${state === 'live' ? ' is-live' : ''}${item.id === focusEvent.id && state === 'scheduled' ? ' is-next' : ''}${shouldAnimate ? ' is-entering' : ''}`;
+      row.className = `event-list__item${state === 'completed' ? ' is-completed' : ''}${state === 'live' ? ' is-live' : ''}${state === 'scheduled' ? ' is-upcoming' : ''}${item.id === focusEvent.id && state === 'scheduled' ? ' is-next' : ''}${shouldAnimate ? ' is-entering' : ''}`;
       if (shouldAnimate) row.style.setProperty('--enter-delay', `${Math.min(index, 3) * 60}ms`);
       const time = document.createElement('time');
       time.dateTime = item.iso;
       time.textContent = item.time;
       const details = document.createElement('div');
-      if (state === 'live' || item.id === focusEvent.id && state === 'scheduled') {
-        const badge = document.createElement('span');
-        badge.className = 'event-list__badge';
-        badge.textContent = state === 'live' ? 'En vivo' : 'Próxima actividad';
-        details.append(badge);
-      }
+      const badge = document.createElement('span');
+      badge.className = `event-list__badge is-${state === 'completed' ? 'completed' : state === 'live' ? 'live' : 'upcoming'}`;
+      badge.textContent = state === 'completed' ? 'Finalizada' : state === 'live' ? 'En vivo' : 'Por iniciar';
+      details.append(badge);
       const title = document.createElement('h3');
       title.textContent = item.title;
       const place = document.createElement('p');
